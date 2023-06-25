@@ -15,6 +15,11 @@ export default defineConfig({
         description: "Website pengelola travel booking",
         icons: [
           {
+            src: "./src/assets/sidebar/icon-hotel.svg",
+            sizes: "14x18",
+            type: "image/svg",
+          },
+          {
             src: "pwa-64x64.png",
             sizes: "64x64",
             type: "image/png",
