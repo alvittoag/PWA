@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react-swc";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  baseL: "./",
   plugins: [
     react(),
     VitePWA({
-      registerType: "autoUpdate",
-      workbox: { cleanupOutdatedCaches: false },
+      registerType: "prompt",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
         name: "TripEase",
