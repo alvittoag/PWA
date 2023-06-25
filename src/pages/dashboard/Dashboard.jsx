@@ -38,6 +38,10 @@ const Dashboard = () => {
 
   console.log(offlineReady);
 
+  if (offlineReady) {
+    return <p>Ofline Ready</p>;
+  }
+
   if (error) {
     return <ErrorPages />;
   }
