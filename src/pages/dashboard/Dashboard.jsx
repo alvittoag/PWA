@@ -14,6 +14,8 @@ import useSWR from "swr";
 import { baseUrl } from "../../services/base";
 import { fetcherGet } from "../../services/fetcher/fetcher";
 
+import { useRegisterSW } from "virtual:pwa-register/react";
+
 const Dashboard = () => {
   const {
     data: dataDashboard,
@@ -22,6 +24,19 @@ const Dashboard = () => {
   } = useSWR(baseUrl(`/admin/dashboard`), fetcherGet, {
     refreshInterval: 1000,
   });
+
+  const {
+    offlineReady: [offlineReady, setOfflineReady],
+  } = useRegisterSW({
+    onRegistered(r) {
+      console.log("SW Registered: " + r);
+    },
+    onRegisterError(error) {
+      console.log("SW registration error", error);
+    },
+  });
+
+  console.log(offlineReady);
 
   if (error) {
     return <ErrorPages />;
