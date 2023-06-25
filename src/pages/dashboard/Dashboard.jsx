@@ -42,10 +42,6 @@ const Dashboard = () => {
     return <p>Ofline Ready</p>;
   }
 
-  if (error) {
-    return <ErrorPages />;
-  }
-
   return (
     <div className="relative">
       <TitlePage title="Dashboard" />
