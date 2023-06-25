@@ -6,13 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "autoUpdate",
-      workbox: { cleanupOutdatedCaches: false },
-      includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
-        name: "TripEase",
-        short_name: "Trip",
-        description: "Website pengelola travel booking",
         icons: [
           {
             src: "./src/assets/sidebar/icon-hotel.svg",
@@ -43,12 +37,6 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
-        theme_color: "#FFFFFF",
-        background_color: "#FFFFFF",
-        display: "standalone",
-        scope: "/",
-        start_url: "/",
-        orientation: "portrait",
       },
     }),
   ],
