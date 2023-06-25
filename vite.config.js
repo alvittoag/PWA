@@ -17,7 +17,7 @@ export default defineConfig({
           {
             src: "./src/assets/sidebar/icon-hotel.svg",
             sizes: "14x18",
-            type: "image/svg",
+            type: "image/svg+xml",
           },
           {
             src: "pwa-64x64.png",
